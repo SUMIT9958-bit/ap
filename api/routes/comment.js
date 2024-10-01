@@ -2,10 +2,10 @@ const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
 const Comment = require('../model/comment')
-const comment = require('../model/comment')
+
 const checkAuth = require('../middleware/checkAuth')
 //post new comment
-router.post('/',(req,res)=>{
+router.post('/',checkAuth,(req,res)=>{
   console.log(req.body)
   const newComment = new Comment({
     _id:new mongoose.Types.ObjectId,

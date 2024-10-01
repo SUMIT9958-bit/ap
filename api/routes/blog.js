@@ -3,7 +3,7 @@ const router = express.Router()
 const mongoose = require('mongoose')
 const Blog = require('../model/blog')
 const checkAdmin = require('../middleware/checkAdmin')
-const checkAuth = require('../middleware/checkAuth')
+
 //get blog by admin
 router.post('/',checkAdmin,(req,res)=>{
   console.log(req.body)

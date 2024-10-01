@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt')
 const User = require('../model/auth')
 const mongoose= require('mongoose')
 const jwt = require('jsonwebtoken')
-const checkAuth = require('../middleware/checkAuth')
+
 
 //user signup
 router.post('/user/signup',(req,res)=>{
