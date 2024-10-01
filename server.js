@@ -3,6 +3,7 @@ const app = require('./app');
 const port = process.env.PORT || 3000;
 
 const server = http.createServer(app);
-server.listen(port,()=>{
-  console.log('app is running on port'+port)
-})
+
+server.listen(port, () => {
+  console.log(`App is running on port ${port}`); // Use template literal
+});
