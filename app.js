@@ -31,4 +31,10 @@ app.use((req,res)=>{
    msg:'bad request'
   })
 })
+
+app.get("*",(req,res)=>{
+  res.status(404).json({
+    msg:'bad reqest'
+  })
+})
 module.exports = app;
